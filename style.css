@@ -1,3 +1,128 @@
-p{
-    color: aqua;
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* common styles or utilities */
+body {font-family: 'Poppins', sans-serif;
+    background-color: rgb(218, 216, 216);
+ }
+ main{
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+ }
+ .container {
+    background-color: white;
+    width: 870px;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+ }
+ hr{
+     border: 1px solid rgb(214, 211, 211);
+ }
+/* top player style  */
+.top-players{
+    margin-bottom: 30px;
+}
+.title{
+    color: royalblue;
+    font-size: 24px;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+   
+}
+.player{
+    display: flex;
+    align-items: center;
+}
+.player img{
+    width: 56px;
+    height: 56px;
+}
+.player-name{
+    margin-left: 12px;
+}
+/* top blog styles  */
+.blog img{
+    width: 177px; 
+    height: 117px;
+}
+.bloges{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.blog{
+    display: flex;
+}
+.blog-info{
+    margin-left: 10px;
+}
+.blog-title{
+    font-size: 20px;
+}
+.blog-author{
+    font-size: 15px;
+    color: grey;
+}
+.blog-author a{
+    text-decoration: none;
+    font-size: 16px;
+    color:darkviolet;
+}
+/* coueces style  */
+.cources{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 24px;
+}
+.cource-bannar img {
+    width: 225px;
+    height: 100px;
+}
+.cource-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#unfilled{
+    color:lightgrey;
+}
+.fa-star{
+    color:orange;
+    font-size: 12px;
+}
+.duration{
+    background-color:pink;
+    color: red;
+    border-radius:20px;
+    padding: 5px;
+}
+/* media quary */
+/* for mobile devices */
+@media only screen and (max-width:688px) {
+        .container{
+            width: 100%;
+        }
+        .players, .bloges, .cources{
+            grid-template-columns: repeat(1,1fr);
+          
+        }  
+        .player, .blog{
+            flex-direction: column;
+        } 
+}
+@media only screen and (min-width:689px) and (max-width:992px){
+    .container{
+        width: 100%;
+    }
+    .players, .bloges, .cources{
+        grid-template-columns: repeat(2,1fr);
+    }  
+    .cources{
+        grid-template-columns: repeat(1,1fr);
+      
+    } 
 }
